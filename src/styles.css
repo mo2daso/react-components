@@ -1,0 +1,210 @@
+/* 🌟 Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🎨 Full Page Centering */
+body {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🔹 Main App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+}
+
+/* 🎯 Component Box Styling with Gradient Borders */
+.component-box {
+  width: 100%;
+  padding: 25px;
+  margin: 30px 0; /* Increased margin for better separation */
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden; /* Ensures the gradient doesn't overflow */
+}
+
+/* Custom border for each component */
+.hello-world-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff6b6b, #ff9f43);
+  border-radius: 17px;
+  z-index: -1;
+}
+
+.tech-stack-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #6c5ce7, #fd79a8);
+  border-radius: 17px;
+  z-index: -1;
+}
+
+.counter-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #0084ff, #00f2ff);
+  border-radius: 17px;
+  z-index: -1;
+}
+
+.form-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #43e97b, #38f9d7);
+  border-radius: 17px;
+  z-index: -1;
+}
+
+/* 🎉 HelloWorld Component */
+.hello-world {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(45deg, #ff6b6b, #ff9f43, #fd79a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* 🎯 Tech Stack List */
+h2 {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(45deg, #6c5ce7, #fd79a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  background: linear-gradient(45deg, rgba(108, 92, 231, 0.15), rgba(253, 121, 168, 0.15));
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+li:hover {
+  transform: translateX(10px);
+}
+
+/* 🖱️ ClickCounter Button */
+button {
+  background: linear-gradient(45deg, #ff6b6b, #ff9f43);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* 🎤 UserForm Input */
+.input-container {
+  position: relative;
+  margin: 20px 0;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px #ff6b6b;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ✨ Responsive Design */
+@media (max-width: 600px) {
+  .app-container {
+    max-width: 95%;
+  }
+  
+  .hello-world {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  li {
+    font-size: 1rem;
+  }
+  
+  button {
+    font-size: 1rem;
+    padding: 12px 24px;
+  }
+}
